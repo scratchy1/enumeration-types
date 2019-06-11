@@ -1,0 +1,26 @@
+enum Planet {
+    Merkur(0, 9.1), Venus(0, 17), Erde(1, 23.4), Mars(2, 35.7), Jupiter(79, 121.7), Saturn(62, 223.6), Uranus(27,
+            450), Neptun(14, 705.1), Pluto(5, 925.3);
+    int numberOfMoons;
+    double distanceToSun;
+    Planet p;
+
+    Planet(int numberOfMoons, double distanceToSun) {
+        this.numberOfMoons = numberOfMoons;
+        this.distanceToSun = distanceToSun;
+    }
+
+    int getNumberOfMoons() {
+        return numberOfMoons;
+    }
+
+    boolean isCloserToSunThan(Planet other) {
+        if (this.distanceToSun < other.distanceToSun) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+}
